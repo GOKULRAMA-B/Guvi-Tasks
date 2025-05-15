@@ -1,0 +1,34 @@
+root@gokulramab:~# pwd
+/root
+root@gokulramab:~# su - Gokul
+Gokul@gokulramab:~$ pwd
+/home/Gokul
+Gokul@gokulramab:~$ mkdir my_folder
+Gokul@gokulramab:~$ cd my_folder/
+Gokul@gokulramab:~/my_folder$ pwd
+/home/Gokul/my_folder
+Gokul@gokulramab:~/my_folder$ touch my_file.txt
+Gokul@gokulramab:~/my_folder$ vim my_file.txt
+Gokul@gokulramab:~/my_folder$ cat my_file.txt
+Test1
+Gokul@gokulramab:~/my_folder$ ls
+my_file.txt
+Gokul@gokulramab:~/my_folder$ cat > another_file.txt
+Test2
+Gokul@gokulramab:~/my_folder$ cat another_file.txt
+Test2
+Gokul@gokulramab:~/my_folder$ ls
+another_file.txt  my_file.txt
+Gokul@gokulramab:~/my_folder$ cat another_file.txt >> my_file.txt
+Gokul@gokulramab:~/my_folder$ ls
+another_file.txt  my_file.txt
+Gokul@gokulramab:~/my_folder$ cat another_file.txt
+Test2
+Gokul@gokulramab:~/my_folder$ cat my_file.txt
+Test1
+Test2
+Gokul@gokulramab:~/my_folder$ ls
+another_file.txt  my_file.txt
+Gokul@gokulramab:~/my_folder$ pwd
+/home/Gokul/my_folder
+Gokul@gokulramab:~/my_folder$
