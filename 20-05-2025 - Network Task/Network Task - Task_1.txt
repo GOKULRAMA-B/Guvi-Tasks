@@ -1,0 +1,69 @@
+=======================================================================================
+1) Get me the IP address of a particular domain (guvi.in)
+
+Gokul@gokulramab:~$ nslookup guvi.in
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+Name:   guvi.in
+Address: 104.26.5.88
+Name:   guvi.in
+Address: 172.67.70.207
+Name:   guvi.in
+Address: 104.26.4.88
+Name:   guvi.in
+Address: 2606:4700:9c6a:d255:c1c6:de9:60b8:c78e
+
+======================================================================================
+How do I find my CPU/memory usage of my server?
+
+Gokul@gokulramab:~$ top
+top - 21:53:23 up 10 min,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  29 total,   1 running,  28 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7820.0 total,   7318.9 free,    367.3 used,    133.8 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   7256.0 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    857 Gokul     20   0    7792   3748   3148 R   0.3   0.0   0:00.01 top
+      1 root      20   0  165756  11020   8176 S   0.0   0.1   0:01.05 systemd
+      2 root      20   0    2776   1920   1796 S   0.0   0.0   0:00.00 init-systemd(Ub
+      7 root      20   0    2776     68     68 S   0.0   0.0   0:00.00 init
+     60 root      19  -1   64136  14484  13360 S   0.0   0.2   0:05.60 systemd-journal
+     84 root      20   0   21832   5628   4460 S   0.0   0.1   0:00.14 systemd-udevd
+     91 systemd+  20   0   26200  13292   8308 S   0.0   0.2   0:00.21 systemd-resolve
+     92 systemd+  20   0   89364   6464   5660 S   0.0   0.1   0:00.27 systemd-timesyn
+    169 root      20   0    4308   2660   2424 S   0.0   0.0   0:00.00 cron
+    171 message+  20   0    8580   4664   4124 S   0.0   0.1   0:00.58 dbus-daemon
+    176 root      20   0   30080  19244  10224 S   0.0   0.2   0:00.20 networkd-dispat
+    177 syslog    20   0  222404   7228   4416 S   0.0   0.1   0:00.06 rsyslogd
+    180 root      20   0   15336   7456   6468 S   0.0   0.1   0:00.29 systemd-logind
+    203 root      20   0    3240   1004    912 S   0.0   0.0   0:00.00 agetty
+    207 root      20   0    3196   1080    996 S   0.0   0.0   0:00.00 agetty
+    225 root      20   0  107160  21048  12940 S   0.0   0.3   0:00.18 unattended-upgr
+    293 root      20   0    2784    204     80 S   0.0   0.0   0:00.00 SessionLeader
+    294 root      20   0    2784    208     80 S   0.0   0.0   0:00.04 Relay(295)
+    295 root      20   0    6128   5128   3404 S   0.0   0.1   0:00.03 bash
+    296 root      20   0    7476   4936   4028 S   0.0   0.1   0:00.00 login
+    394 root      20   0   16988   9316   7792 S   0.0   0.1   0:00.11 systemd
+==========================================================================================
+ Test the connectivity between 2 nodes?
+
+Gokul@gokulramab:~$ ping guvi.in
+PING guvi.in (104.26.4.88) 56(84) bytes of data.
+64 bytes from 104.26.4.88 (104.26.4.88): icmp_seq=1 ttl=52 time=27.8 ms
+64 bytes from 104.26.4.88 (104.26.4.88): icmp_seq=2 ttl=52 time=36.0 ms
+64 bytes from 104.26.4.88 (104.26.4.88): icmp_seq=3 ttl=52 time=31.8 ms
+64 bytes from 104.26.4.88 (104.26.4.88): icmp_seq=4 ttl=52 time=33.7 ms
+64 bytes from 104.26.4.88 (104.26.4.88): icmp_seq=5 ttl=52 time=30.6 ms
+64 bytes from 104.26.4.88 (104.26.4.88): icmp_seq=6 ttl=52 time=27.2 ms
+64 bytes from 104.26.4.88 (104.26.4.88): icmp_seq=7 ttl=52 time=31.5 ms
+64 bytes from 104.26.4.88 (104.26.4.88): icmp_seq=8 ttl=52 time=30.7 ms
+^C
+--- guvi.in ping statistics ---
+8 packets transmitted, 8 received, 0% packet loss, time 7006ms
+rtt min/avg/max/mdev = 27.211/31.170/36.008/2.693 ms
+Gokul@gokulramab:~$ ^C
+Gokul@gokulramab:~$
+============================================================================================
