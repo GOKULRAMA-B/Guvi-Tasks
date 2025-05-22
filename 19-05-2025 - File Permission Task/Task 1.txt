@@ -1,0 +1,35 @@
+root@gokulramab:~# pwd
+/root
+root@gokulramab:~# su - Gokul
+Gokul@gokulramab:~$ pwd
+/home/Gokul
+Gokul@gokulramab:~$ cd ..
+Gokul@gokulramab:/home$ pwd
+/home
+Gokul@gokulramab:/home$ ls -ld /home
+drwxr-xr-x 3 root root 4096 May 19 21:25 /home
+Gokul@gokulramab:/home$ touch demo.txt
+touch: cannot touch 'demo.txt': Permission denied
+Gokul@gokulramab:/home$ sudo chmod g+w,o+w /home
+Gokul@gokulramab:/home$ ls -l
+total 4
+drwxr-x--- 6 Gokul Gokul 4096 May 19 21:10 Gokul
+-rw-rw-r-- 1 Gokul Gokul    0 May 19 21:25 test.txt
+Gokul@gokulramab:/home$ ls -ld /home
+drwxrwxrwx 3 root root 4096 May 19 21:25 /home
+Gokul@gokulramab:/home$ pwd
+/home
+Gokul@gokulramab:/home$ touch demo.txt
+Gokul@gokulramab:/home$ ls -l
+total 4
+drwxr-x--- 6 Gokul Gokul 4096 May 19 21:10 Gokul
+-rw-rw-r-- 1 Gokul Gokul    0 May 19 21:34 demo.txt
+-rw-rw-r-- 1 Gokul Gokul    0 May 19 21:25 test.txt
+Gokul@gokulramab:/home$ sudo chmod u+x demo.txt
+Gokul@gokulramab:/home$ ls -l
+total 4
+drwxr-x--- 6 Gokul Gokul 4096 May 19 21:10 Gokul
+-rwxrw-r-- 1 Gokul Gokul    0 May 19 21:34 demo.txt
+-rw-rw-r-- 1 Gokul Gokul    0 May 19 21:25 test.txt
+Gokul@gokulramab:/home$ ls -l demo.txt
+-rwxrw-r-- 1 Gokul Gokul 0 May 19 21:34 demo.txt
