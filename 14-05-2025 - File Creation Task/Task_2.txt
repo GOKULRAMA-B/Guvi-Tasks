@@ -1,0 +1,70 @@
+root@gokulramab:~#
+root@gokulramab:~# pwd
+/root
+root@gokulramab:~# su - Gokul
+Gokul@gokulramab:~$ pwd
+/home/Gokul
+Gokul@gokulramab:~$ mkdir Task2
+Gokul@gokulramab:~$ cd Task2/
+Gokul@gokulramab:~/Task2$ pwd
+/home/Gokul/Task2
+Gokul@gokulramab:~/Task2$ ls
+Gokul@gokulramab:~/Task2$ touch test1.txt test2.txt test3.txt test4.txt test5.txt test6.txt test7.txt test8.txt test9.txt test10.txt test11.txt test12.txt test13.txt test14.txt test15.txt test16.txt test17.txt test18.txt test19.txt test20.txt
+Gokul@gokulramab:~/Task2$ ls -l
+total 0
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test1.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test10.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test11.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test12.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test13.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test14.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test15.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test16.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test17.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test18.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test19.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test2.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test20.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test3.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test4.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test5.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test6.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test7.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test8.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test9.txt
+Gokul@gokulramab:~/Task2$ mv test1.txt test1.yml
+Gokul@gokulramab:~/Task2$ mv test10.txt test10.yml
+Gokul@gokulramab:~/Task2$ mv test11.txt test11.yml
+Gokul@gokulramab:~/Task2$ mv test12.txt test12.yml
+Gokul@gokulramab:~/Task2$ mv test13.txt test13.yml
+Gokul@gokulramab:~/Task2$ ls -l
+total 0
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test1.yml
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test10.yml
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test11.yml
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test12.yml
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test13.yml
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test14.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test15.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test16.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test17.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test18.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test19.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test2.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test20.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test3.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test4.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test5.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test6.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test7.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test8.txt
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test9.txt
+Gokul@gokulramab:~/Task2$ ls -lt | grep -i 'yml' | head -5
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test1.yml
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test10.yml
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test11.yml
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test12.yml
+-rw-rw-r-- 1 Gokul Gokul 0 May 15 22:24 test13.yml
+Gokul@gokulramab:~/Task2$ pwd
+/home/Gokul/Task2
+Gokul@gokulramab:~/Task2$
