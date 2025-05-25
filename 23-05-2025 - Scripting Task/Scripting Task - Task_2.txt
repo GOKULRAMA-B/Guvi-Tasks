@@ -1,0 +1,30 @@
+Gokul@gokulramab:~/Bash$ ls -l
+total 12
+-rwxrwxr-x 1 Gokul Gokul 220 May 25 21:24 script1.sh
+-rwxrwxrwx 1 Gokul Gokul  99 May 23 00:21 test1.sh
+-rwxrwxr-x 1 Gokul Gokul 222 May 25 21:19 test2.sh
+Gokul@gokulramab:~/Bash$ nano script3.sh
+Gokul@gokulramab:~/Bash$ nano script3.sh
+Gokul@gokulramab:~/Bash$ ls -l
+total 16
+-rwxrwxr-x 1 Gokul Gokul 220 May 25 21:24 script1.sh
+-rw-rw-r-- 1 Gokul Gokul 130 May 25 22:04 script3.sh
+-rwxrwxrwx 1 Gokul Gokul  99 May 23 00:21 test1.sh
+-rwxrwxr-x 1 Gokul Gokul 222 May 25 21:19 test2.sh
+Gokul@gokulramab:~/Bash$ chmod +x script3.sh
+Gokul@gokulramab:~/Bash$ ./script3.sh
+give your pen
+give your pencil
+giving your books
+gives your bag
+learning your chocolate
+Gokul@gokulramab:~/Bash$ cat script3.sh
+#! /bin/bash
+echo "give your pen
+give your pencil
+giving your books
+gives your bag
+give your chocolate" | sed '5s/give/learning/'
+Gokul@gokulramab:~/Bash$
+
+
