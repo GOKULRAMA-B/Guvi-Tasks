@@ -1,0 +1,30 @@
+root@gokulramab:~# pwd
+/root
+root@gokulramab:~# su - Gokul
+Gokul@gokulramab:~$ ls -l
+total 12
+drwxrwxrwx 2 Gokul Gokul 4096 May 26 23:45 Bash
+drwxrwxr-x 2 Gokul Gokul 4096 May 15 22:25 Task2
+drwxrwxr-x 2 Gokul Gokul 4096 May 22 23:49 task1
+Gokul@gokulramab:~$ cd Bash/
+Gokul@gokulramab:~/Bash$ ls -l
+total 0
+Gokul@gokulramab:~/Bash$ nano script1.sh
+Gokul@gokulramab:~/Bash$ cat script1.sh
+#! /bin/bash
+#Given a file, replace all occurrence of the word "give" with "learning" from 5th line till the end in only those lines that contain the word "welcome"
+echo "give your pen!
+give your pencil and welcome!!
+give your chocolates!
+give your book!
+give your water and welcome you!" | awk 'NR==5 { print }' | awk '/welcome/ { print }' | sed 's/give/learning/'
+Gokul@gokulramab:~/Bash$ ls -l
+total 4
+-rw-rw-r-- 1 Gokul Gokul 366 May 26 23:46 script1.sh
+Gokul@gokulramab:~/Bash$ chmod +x script1.sh
+Gokul@gokulramab:~/Bash$ ls -l
+total 4
+-rwxrwxr-x 1 Gokul Gokul 366 May 26 23:46 script1.sh
+Gokul@gokulramab:~/Bash$ ./script1.sh
+learning your water and welcome you!
+Gokul@gokulramab:~/Bash$

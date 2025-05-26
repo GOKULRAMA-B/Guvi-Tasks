@@ -1,0 +1,93 @@
+root@gokulramab:~# pwd
+/root
+root@gokulramab:~# su - Gokul
+Gokul@gokulramab:~$ pwd
+/home/Gokul
+Gokul@gokulramab:~$ cd Bash/
+Gokul@gokulramab:~/Bash$ ls -l
+total 28
+-rwxrwxr-x 1 Gokul Gokul 220 May 25 21:24  script1.sh
+-rwxrwxr-x 1 Gokul Gokul 158 May 25 22:24  script3.sh
+-rw-rw-r-- 1 Gokul Gokul 144 May 25 22:19 "script3.sh'"
+-rw-rw-r-- 1 Gokul Gokul  88 May 25 22:19  test.txt
+-rwxrwxrwx 1 Gokul Gokul  99 May 23 00:21  test1.sh
+-rwxrwxr-x 1 Gokul Gokul 222 May 25 21:19  test2.sh
+-rwxrwxr-x 1 Gokul Gokul 178 May 26 22:50  test5.sh
+Gokul@gokulramab:~/Bash$ nano script5.sh
+Gokul@gokulramab:~/Bash$ cat script5.sh
+#! /bin/bash
+curl guvi.in
+echo "Enter HTTP Response Code Is:"
+read error
+if [ $error -ge 200 ] && [ $error -le 300 ];
+then
+echo "Success:$error"
+else
+echo "Failure:$error"
+fi
+Gokul@gokulramab:~/Bash$ ls -l
+total 32
+-rwxrwxr-x 1 Gokul Gokul 220 May 25 21:24  script1.sh
+-rwxrwxr-x 1 Gokul Gokul 158 May 25 22:24  script3.sh
+-rw-rw-r-- 1 Gokul Gokul 144 May 25 22:19 "script3.sh'"
+-rw-rw-r-- 1 Gokul Gokul 175 May 26 22:52  script5.sh
+-rw-rw-r-- 1 Gokul Gokul  88 May 25 22:19  test.txt
+-rwxrwxrwx 1 Gokul Gokul  99 May 23 00:21  test1.sh
+-rwxrwxr-x 1 Gokul Gokul 222 May 25 21:19  test2.sh
+-rwxrwxr-x 1 Gokul Gokul 178 May 26 22:50  test5.sh
+Gokul@gokulramab:~/Bash$ chmod +x script5.sh
+Gokul@gokulramab:~/Bash$ ls -l
+total 32
+-rwxrwxr-x 1 Gokul Gokul 220 May 25 21:24  script1.sh
+-rwxrwxr-x 1 Gokul Gokul 158 May 25 22:24  script3.sh
+-rw-rw-r-- 1 Gokul Gokul 144 May 25 22:19 "script3.sh'"
+-rwxrwxr-x 1 Gokul Gokul 175 May 26 22:52  script5.sh
+-rw-rw-r-- 1 Gokul Gokul  88 May 25 22:19  test.txt
+-rwxrwxrwx 1 Gokul Gokul  99 May 23 00:21  test1.sh
+-rwxrwxr-x 1 Gokul Gokul 222 May 25 21:19  test2.sh
+-rwxrwxr-x 1 Gokul Gokul 178 May 26 22:50  test5.sh
+Gokul@gokulramab:~/Bash$ ./script5.sh
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>cloudflare</center>
+</body>
+</html>
+Enter HTTP Response Code Is:
+200
+Success:200
+Gokul@gokulramab:~/Bash$ ./script5.sh
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>cloudflare</center>
+</body>
+</html>
+Enter HTTP Response Code Is:
+300
+Success:300
+Gokul@gokulramab:~/Bash$ ./script5.sh
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>cloudflare</center>
+</body>
+</html>
+Enter HTTP Response Code Is:
+500
+Failure:500
+Gokul@gokulramab:~/Bash$ ./script5.sh
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>cloudflare</center>
+</body>
+</html>
+Enter HTTP Response Code Is:
+400
+Failure:400
+Gokul@gokulramab:~/Bash$
